@@ -5,6 +5,6 @@ workflow "New workflow" {
 
 action "docker://centos" {
   uses = "docker://centos"
-  runs = "python -m 'SimpleHTTPServer'"
+  runs = "python -m http.server"
   secrets = ["GITHUB_TOKEN"]
 }
