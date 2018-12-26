@@ -3,15 +3,8 @@ workflow "New workflow" {
   resolves = ["docker://centos"]
 }
 
-action "GitHub Action for Docker" {
-  uses = "actions/docker/cli@76ff57a"
-  secrets = ["GITHUB_TOKEN"]
-  runs = "echo '----------------'"
-}
-
 action "docker://centos" {
   uses = "docker://centos"
-  needs = ["GitHub Action for Docker"]
-  runs = "curl http://baidu.com"
+  runs = "curl https://tel.sxtofun.com/cc/ -v -a"
   secrets = ["GITHUB_TOKEN"]
 }
