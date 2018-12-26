@@ -1,6 +1,6 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["GitHub Action for Docker-1"]
+  resolves = ["docker://centos"]
 }
 
 action "GitHub Action for Docker" {
@@ -9,9 +9,9 @@ action "GitHub Action for Docker" {
   runs = "echo '----------------'"
 }
 
-action "GitHub Action for Docker-1" {
-  uses = "actions/docker/cli@76ff57a"
+action "docker://centos" {
+  uses = "docker://centos"
   needs = ["GitHub Action for Docker"]
+  runs = "curl http://baidu.com"
   secrets = ["GITHUB_TOKEN"]
-  runs = "curl http://baidu.com -v"
 }
